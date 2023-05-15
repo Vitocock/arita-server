@@ -1,6 +1,7 @@
 from django.http import FileResponse, HttpRequest, HttpResponse
 
 def wordSplitter(request):
-    archivo = open("hola.txt", 'w')
+    archivo = open("tmp/hola.txt", 'w')
     archivo.close()
-    return FileResponse(open('goku.zip', 'rb'))
+
+    return HttpResponse("hola")
